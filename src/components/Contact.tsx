@@ -227,9 +227,20 @@ export function Contact({ isStandalone = false }: ContactProps) {
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-4">
                   {status === "error" && (
-                    <div className="p-3 rounded-md bg-red-950/40 border border-red-800/60 text-red-200 text-xs font-mono flex items-center gap-2">
-                      <AlertCircle className="w-4 h-4 shrink-0" />
-                      <span>{errorMessage}</span>
+                    <div className="p-3.5 rounded-md bg-red-950/40 border border-red-800/60 text-red-200 text-xs font-mono space-y-2">
+                      <div className="flex items-start gap-2">
+                        <AlertCircle className="w-4 h-4 shrink-0 mt-0.5 text-red-400" />
+                        <span className="flex-1">{errorMessage}</span>
+                      </div>
+                      <div className="pt-1">
+                        <a
+                          href={`mailto:${emailAddress}?subject=${encodeURIComponent("Project Inquiry: " + formState.projectType)}&body=${encodeURIComponent("Name: " + formState.name + "\nEmail: " + formState.email + "\n\n" + formState.message)}`}
+                          className="inline-flex items-center gap-1.5 text-[11px] text-accent underline underline-offset-2 hover:text-accent-hover font-sans font-medium"
+                        >
+                          <span>Or click here to send via your email client</span>
+                          <ArrowUpRight className="w-3 h-3" />
+                        </a>
+                      </div>
                     </div>
                   )}
 

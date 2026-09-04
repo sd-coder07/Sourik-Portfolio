@@ -1,13 +1,11 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
-const resendApiKey = process.env.RESEND_API_KEY || "re_MHv29TqL_8Uh8eBx8EVnzkBCbxgvRPvCF";
-const resend = new Resend(resendApiKey);
-
-const recipientEmail = process.env.CONTACT_EMAIL_TO || "dassourik558@gmail.com";
-
 export async function POST(request: Request) {
   try {
+    const apiKey = process.env.RESEND_API_KEY || "re_MHv29TqL_8Uh8eBx8EVnzkBCbxgvRPvCF";
+    const recipientEmail = process.env.CONTACT_EMAIL_TO || "dassourik558@gmail.com";
+    const resend = new Resend(apiKey);
     const body = await request.json();
     const { name, email, projectType, message } = body;
 
