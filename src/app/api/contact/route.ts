@@ -108,7 +108,10 @@ export async function POST(request: Request) {
     if (error) {
       console.error("[Resend Error]", error);
       return NextResponse.json(
-        { error: "Email delivery provider reported an issue. Please try again or email directly." },
+        { 
+          error: error.message || "Email delivery provider reported an issue. Please check your Resend API Key or recipient configuration.",
+          details: error 
+        },
         { status: 500 }
       );
     }
