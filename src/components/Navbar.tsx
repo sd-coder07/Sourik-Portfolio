@@ -2,32 +2,18 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Menu, X, ArrowUpRight, Code2 } from "lucide-react";
+import { usePathname } from "next/navigation";
+import { Menu, X, ArrowUpRight } from "lucide-react";
 import { Logo } from "./Logo";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [activeSection, setActiveSection] = useState<string>("");
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
-
-      const sections = ["services", "work", "process", "about", "contact"];
-      const scrollPosition = window.scrollY + 200;
-
-      for (const section of sections) {
-        const el = document.getElementById(section);
-        if (el) {
-          const top = el.offsetTop;
-          const height = el.offsetHeight;
-          if (scrollPosition >= top && scrollPosition < top + height) {
-            setActiveSection(section);
-            break;
-          }
-        }
-      }
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -35,11 +21,20 @@ export function Navbar() {
   }, []);
 
   const navLinks = [
-    { label: "Services", href: "/#services", id: "services" },
-    { label: "Work", href: "/#work", id: "work" },
-    { label: "Process", href: "/#process", id: "process" },
-    { label: "About", href: "/#about", id: "about" },
+    { label: "Services", href: "/services", id: "services" },
+    { label: "Work", href: "/work", id: "work" },
+    { label: "Process", href: "/process", id: "process" },
+    { label: "About", href: "/about-us", id: "about" },
   ];
+
+  const isLinkActive = (link: { href: string; id: string }) => {
+    if (pathname === "/") return false;
+    if (link.href === "/services" && pathname === "/services") return true;
+    if (link.href === "/work" && pathname === "/work") return true;
+    if (link.href === "/process" && pathname === "/process") return true;
+    if (link.href === "/about-us" && (pathname === "/about-us" || pathname === "/about")) return true;
+    return false;
+  };
 
   return (
     <header
@@ -51,7 +46,7 @@ export function Navbar() {
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          {/* Brand Wordmark */}
+          {/* Brand Wordmark / Home Button */}
           <Link
             href="/"
             className="group focus:outline-none"
@@ -63,9 +58,9 @@ export function Navbar() {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-1 bg-surface/60 border border-border/80 px-3 py-1.5 rounded-full backdrop-blur-sm">
             {navLinks.map((link) => {
-              const isActive = activeSection === link.id;
+              const isActive = isLinkActive(link);
               return (
-                <a
+                <Link
                   key={link.href}
                   href={link.href}
                   className={`px-3.5 py-1 text-xs font-mono transition-colors rounded-full ${
@@ -75,7 +70,7 @@ export function Navbar() {
                   }`}
                 >
                   {link.label}
-                </a>
+                </Link>
               );
             })}
           </nav>
@@ -84,7 +79,7 @@ export function Navbar() {
           <div className="hidden md:flex items-center gap-4">
             <Link
               href="/contact"
-              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-md bg-accent text-bg font-mono text-xs font-semibold hover:bg-accent-hover active:scale-[0.98] transition-all shadow-sm shadow-accent/20"
+              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-md bg-accent text-bg font-mono text-xs font-semibold hover:bg-accent-hover active:scale-[0.98] transition-all shadow-sm shadow-accent/20 border border-black"
             >
               <span>Get in touch</span>
               <ArrowUpRight className="w-3.5 h-3.5" />
@@ -108,24 +103,24 @@ export function Navbar() {
           <div className="md:hidden mt-3 p-4 rounded-lg bg-surface border border-border shadow-xl animate-fadeInUp">
             <div className="flex flex-col gap-2">
               {navLinks.map((link) => (
-                <a
+                <Link
                   key={link.href}
                   href={link.href}
                   onClick={() => setIsOpen(false)}
                   className={`px-3 py-2 text-sm font-mono rounded-md transition-colors ${
-                    activeSection === link.id
+                    isLinkActive(link)
                       ? "bg-accent-muted text-accent font-medium"
                       : "text-text-muted hover:text-text-primary hover:bg-surface-elevated"
                   }`}
                 >
                   {link.label}
-                </a>
+                </Link>
               ))}
               <div className="pt-2 border-t border-border mt-2">
                 <Link
                   href="/contact"
                   onClick={() => setIsOpen(false)}
-                  className="flex items-center justify-center gap-2 w-full px-4 py-2.5 rounded-md bg-accent text-bg font-mono text-xs font-semibold hover:bg-accent-hover transition-colors"
+                  className="flex items-center justify-center gap-2 w-full px-4 py-2.5 rounded-md bg-accent text-bg font-mono text-xs font-semibold hover:bg-accent-hover transition-colors border border-black"
                 >
                   <span>Get in touch</span>
                   <ArrowUpRight className="w-4 h-4" />

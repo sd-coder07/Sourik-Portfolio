@@ -74,14 +74,14 @@ export function Contact({ isStandalone = false }: ContactProps) {
           <div className="flex items-center gap-2 mb-3">
             <span className="font-mono text-xs text-accent">05 //</span>
             <span className="font-mono text-xs uppercase tracking-widest text-text-muted">
-              Get In Touch
+              Hire Developer &amp; Get In Touch
             </span>
           </div>
           <h2 className="font-display font-bold text-3xl sm:text-5xl text-text-primary tracking-tight mb-3">
-            Have a project? Let&apos;s talk.
+            Ready to start your project? Let&apos;s build.
           </h2>
           <p className="text-base text-text-muted max-w-2xl">
-            Whether you need a brand-new Next.js application built from scratch or a high-converting WordPress website shipped fast, drop a note below.
+            Whether you need a full-stack Next.js web application, a high-speed WordPress website (guaranteed 90+ Core Web Vitals), custom product &amp; service poster designs, or a modern Figma UI/UX prototype, send your project inquiry below.
           </p>
         </div>
 
@@ -186,9 +186,9 @@ export function Contact({ isStandalone = false }: ContactProps) {
             <div className="p-5 rounded-xl bg-surface/50 border border-border text-xs font-mono text-text-muted flex items-start gap-3">
               <span className="w-2 h-2 rounded-full bg-emerald-500 mt-1 shrink-0" />
               <div>
-                <span className="text-text-primary font-medium">Available for select projects.</span>
+                <span className="text-text-primary font-medium">Available for select client projects.</span>
                 <p className="mt-0.5 text-text-subtle">
-                  Timezone: IST (UTC+5:30) • Open to international clients and asynchronous collaboration.
+                  Timezone: IST (UTC+5:30) • Open to global clients, asynchronous collaboration &amp; fixed-milestone engagements.
                 </p>
               </div>
             </div>
@@ -198,10 +198,10 @@ export function Contact({ isStandalone = false }: ContactProps) {
           <div className="lg:col-span-7">
             <div className="p-6 sm:p-8 rounded-xl bg-surface border border-border">
               <h3 className="font-display font-bold text-xl text-text-primary mb-2">
-                Project Inquiry Form
+                Project Inquiry &amp; Estimate Request
               </h3>
               <p className="text-xs text-text-muted font-sans mb-6">
-                Fill out the brief below and I&apos;ll get back to you with timeline estimations and architectural recommendations.
+                Fill out the project scope brief below. I will reply within 24 hours with architectural suggestions, milestone timelines, and a transparent quote.
               </p>
 
               {status === "success" ? (
@@ -283,7 +283,7 @@ export function Contact({ isStandalone = false }: ContactProps) {
                       htmlFor="projectType"
                       className="block font-mono text-xs text-text-muted"
                     >
-                      Project Type <span className="text-accent">*</span>
+                      Service Category / Project Type <span className="text-accent">*</span>
                     </label>
                     <select
                       id="projectType"
@@ -293,8 +293,10 @@ export function Contact({ isStandalone = false }: ContactProps) {
                       }
                       className="w-full px-3.5 py-2.5 rounded-md bg-bg border border-border text-sm text-text-primary focus:outline-none focus:border-accent font-sans"
                     >
-                      <option value="Next.js App">Next.js Web Application / Product</option>
-                      <option value="WordPress Website">WordPress Website / Business Site</option>
+                      <option value="Next.js App">Next.js Web Application / SaaS / Product</option>
+                      <option value="WordPress Website">WordPress Website / Business Site / WooCommerce</option>
+                      <option value="Poster Design">Poster Making (Product or Service Based)</option>
+                      <option value="Website Design">Website Design (Figma Prototype / Canva System)</option>
                       <option value="Full-Stack / Custom">Full-Stack Custom Project (MERN / Next.js + MongoDB)</option>
                       <option value="Not sure yet">Not sure yet / Need technical recommendation</option>
                     </select>

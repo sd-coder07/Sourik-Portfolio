@@ -40,14 +40,14 @@ export function Work() {
             <div className="flex items-center gap-2 mb-3">
               <span className="font-mono text-xs text-accent">02 //</span>
               <span className="font-mono text-xs uppercase tracking-widest text-text-muted">
-                Selected Works
+                Client Projects &amp; Case Studies
               </span>
             </div>
             <h2 className="font-display font-bold text-3xl sm:text-4xl text-text-primary tracking-tight mb-2">
-              Shipped Production Builds
+              Shipped Production Websites &amp; Web Applications
             </h2>
             <p className="text-sm sm:text-base text-text-muted max-w-xl">
-              Real projects shipped to production. Filter by technology stack to explore custom Next.js web applications and WordPress business sites.
+              Verified client deliverables shipped to live production. Explore custom Next.js web applications, e-commerce stores, and WordPress business websites engineered for speed, conversion, and high Google search visibility.
             </p>
           </div>
 

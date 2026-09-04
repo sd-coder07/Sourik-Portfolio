@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { CheckCircle2, Layers, Cpu, Globe2, Sparkles, ArrowRight } from "lucide-react";
+import { CheckCircle2, Code2, Globe2, Palette, Layout, ArrowRight } from "lucide-react";
 import { ServiceItem } from "@/types";
 
 interface ServiceCardProps {
@@ -7,7 +7,20 @@ interface ServiceCardProps {
 }
 
 export function ServiceCard({ service }: ServiceCardProps) {
-  const isNextJs = service.id === "nextjs";
+  const getServiceIcon = () => {
+    switch (service.id) {
+      case "nextjs":
+        return <Code2 className="w-5 h-5" />;
+      case "wordpress":
+        return <Globe2 className="w-5 h-5" />;
+      case "poster-making":
+        return <Palette className="w-5 h-5" />;
+      case "website-design":
+        return <Layout className="w-5 h-5" />;
+      default:
+        return <Code2 className="w-5 h-5" />;
+    }
+  };
 
   return (
     <div className="group relative rounded-xl bg-surface border border-border p-6 sm:p-8 flex flex-col justify-between border-glow-hover transition-all duration-300">
@@ -19,7 +32,7 @@ export function ServiceCard({ service }: ServiceCardProps) {
             <span className="font-mono text-xs text-text-muted">{service.tag}</span>
           </div>
           <div className="p-2 rounded-md bg-surface-elevated border border-border/80 text-text-muted group-hover:text-accent transition-colors">
-            {isNextJs ? <Cpu className="w-5 h-5" /> : <Globe2 className="w-5 h-5" />}
+            {getServiceIcon()}
           </div>
         </div>
 

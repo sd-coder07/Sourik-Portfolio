@@ -1,4 +1,4 @@
-export type StackType = "nextjs" | "wordpress";
+export type StackType = "nextjs" | "wordpress" | "design" | "poster";
 
 export interface Project {
   id: string;
@@ -13,6 +13,7 @@ export interface Project {
   githubUrl?: string;
   featured?: boolean;
   metrics?: string;
+  image?: string;
 }
 
 export interface ServiceItem {
@@ -23,6 +24,19 @@ export interface ServiceItem {
   deliverables: string[];
   capabilities: string[];
   metrics: string;
+  iconType?: "nextjs" | "wordpress" | "poster" | "design";
+}
+
+export interface PosterDemoItem {
+  id: string;
+  title: string;
+  category: "product" | "service";
+  categoryLabel: string;
+  description: string;
+  dimensions?: string;
+  toolsUsed: string[];
+  imageSrc?: string;
+  status: "coming_soon" | "available";
 }
 
 export interface ExperienceItem {
@@ -50,4 +64,17 @@ export interface CertificationItem {
   date?: string;
   credentialId?: string;
   link?: string;
+}
+
+export interface Testimonial {
+  id: string;
+  quote: string;
+  author: string;
+  role: string;
+  company: string;
+  projectType: string;
+  projectBadge: string;
+  metric?: string;
+  rating?: number;
+  avatarUrl?: string;
 }

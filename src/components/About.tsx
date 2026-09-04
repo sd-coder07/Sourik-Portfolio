@@ -21,14 +21,14 @@ export function About() {
           <div className="flex items-center gap-2 mb-3">
             <span className="font-mono text-xs text-accent">04 //</span>
             <span className="font-mono text-xs uppercase tracking-widest text-text-muted">
-              Background &amp; Credentials
+              About Developer &amp; Credentials
             </span>
           </div>
           <h2 className="font-display font-bold text-3xl sm:text-4xl text-text-primary tracking-tight mb-2">
-            Engineering Experience
+            Full-Stack Engineering &amp; Design Credentials
           </h2>
           <p className="text-base text-text-muted max-w-2xl">
-            Real credibility signals. Background spanning production web development at Dronahost, Generative AI research, IBM cloud initiatives, and computer science fundamentals.
+            Demonstrated engineering expertise spanning production web development at Dronahost, 25+ shipped WordPress and Next.js websites, generative AI integrations, and computer science fundamentals.
           </p>
         </div>
 

@@ -86,8 +86,8 @@ export const SKILL_CATEGORIES = [
     skills: ["Next.js", "React", "TypeScript", "JavaScript (ES6+)", "WordPress", "Node.js", "MongoDB"],
   },
   {
-    category: "Styling & UI",
-    skills: ["Tailwind CSS", "CSS3 / Sass", "Space Grotesk", "Responsive UI", "Gutenberg", "Framer Motion"],
+    category: "Design & Creative",
+    skills: ["Figma (UI/UX)", "Canva Templates", "Poster Making", "Responsive UI", "Tailwind CSS", "Design Systems"],
   },
   {
     category: "Backend & AI",

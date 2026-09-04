@@ -10,14 +10,14 @@ export function Services() {
           <div className="flex items-center gap-2 mb-3">
             <span className="font-mono text-xs text-accent">01 //</span>
             <span className="font-mono text-xs uppercase tracking-widest text-text-muted">
-              Capabilities
+              Core Services &amp; Capabilities
             </span>
           </div>
           <h2 className="font-display font-bold text-3xl sm:text-4xl text-text-primary tracking-tight mb-4">
-            Specialized Development Tracks
+            Web Development, WordPress &amp; Creative Design Services
           </h2>
           <p className="text-base text-text-muted max-w-2xl">
-            Two focused disciplines engineered without compromise. Whether you need a reactive Next.js app or a high-converting WordPress presence, you get production-grade engineering.
+            Four specialized disciplines engineered to rank on Google and maximize conversions: full-stack Next.js web applications, high-speed WordPress builds with 90+ Core Web Vitals, high-converting product &amp; service promotional posters, and modern Figma UI/UX systems.
           </p>
         </div>
 

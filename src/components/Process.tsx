@@ -4,39 +4,39 @@ export function Process() {
   const steps = [
     {
       num: "01",
-      title: "Discover",
-      subtitle: "Understand goals, audience, & content",
+      title: "Discovery & SEO Scoping",
+      subtitle: "Business goals, keywords & tech stack",
       icon: Search,
       details:
-        "Clarifying key business objectives, target audience requirements, tech stack selection (Next.js vs. WordPress), and structural content hierarchy.",
-      deliverable: "Scope & architecture brief",
+        "Analyzing target audience, search intent keywords, architectural requirements, technology track selection (Next.js vs. WordPress), and sitemap content structure.",
+      deliverable: "Scope & architecture blueprint",
     },
     {
       num: "02",
-      title: "Design",
-      subtitle: "Wireframe & visual direction",
+      title: "UI/UX & Creative Design",
+      subtitle: "Figma wireframes, UI kits & poster designs",
       icon: PenTool,
       details:
-        "Crafting intuitive UX wireframes, component layouts, and responsive design systems. Establishing typography, token palettes, and micro-interactions.",
-      deliverable: "Approved visual system",
+        "Crafting intuitive responsive Figma mockups, design tokens, modular Canva templates, and high-converting product or service promotional poster concepts.",
+      deliverable: "Approved interactive prototype",
     },
     {
       num: "03",
-      title: "Build",
-      subtitle: "Develop in Next.js or WordPress, iterate with you",
+      title: "Full-Stack Development",
+      subtitle: "Next.js App Router or custom WordPress",
       icon: Code2,
       details:
-        "Clean, maintainable code implementation. Setting up SSR, APIs, or custom WordPress themes with weekly preview deployments and fast feedback loops.",
-      deliverable: "Staging preview build",
+        "Clean, type-safe implementation with Server-Side Rendering (SSR), custom database schemas, API integrations, and continuous staging deployments on Vercel.",
+      deliverable: "Live staging preview build",
     },
     {
       num: "04",
-      title: "Launch & Support",
-      subtitle: "Deploy, optimize, & ongoing care",
+      title: "Core Web Vitals, SEO & Launch",
+      subtitle: "90+ speed tuning, schema & deployment",
       icon: Rocket,
       details:
-        "Production deployment to Vercel or cloud servers, domain & SSL configuration, Core Web Vitals speed tuning, and ongoing maintenance support.",
-      deliverable: "Live site + handover",
+        "Rigorous performance tuning for 90+ Lighthouse scores, OpenGraph & JSON-LD schema implementation, zero-downtime hosting deployment, and 30-day post-launch care.",
+      deliverable: "Live production site + code handover",
     },
   ];
 
@@ -48,14 +48,14 @@ export function Process() {
           <div className="flex items-center gap-2 mb-3">
             <span className="font-mono text-xs text-accent">03 //</span>
             <span className="font-mono text-xs uppercase tracking-widest text-text-muted">
-              Workflow
+              Engineering Workflow
             </span>
           </div>
           <h2 className="font-display font-bold text-3xl sm:text-4xl text-text-primary tracking-tight mb-2">
-            Engineered For Speed &amp; Certainty
+            Website Development &amp; Delivery Process
           </h2>
           <p className="text-base text-text-muted max-w-2xl">
-            A structured 4-step sequence designed to ship projects on time without communication overhead or unexpected bottlenecks.
+            A battle-tested 4-stage workflow designed to launch high-performance websites and creative assets on schedule, on budget, and fully optimized for Google search rankings.
           </p>
         </div>
 
