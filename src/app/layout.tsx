@@ -172,6 +172,10 @@ export default function RootLayout({
       className={`${spaceGrotesk.variable} ${inter.variable} ${jetbrainsMono.variable} scroll-smooth`}
     >
       <head>
+        <meta
+          name="google-site-verification"
+          content="lGh4hvVQCz6I8QQjLh8LI22jjr4aGkhG-s_QJ4RPVz0"
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
