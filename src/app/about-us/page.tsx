@@ -73,6 +73,11 @@ const aboutJsonLd = {
     sameAs: [
       "https://github.com/sd-coder07",
       "https://linkedin.com/in/sourik-das",
+      "https://x.com/SourikDas17274",
+      "https://www.instagram.com/sourik_das_/",
+      "https://www.facebook.com/profile.php?id=61572010961700",
+      "https://www.fiverr.com/s/VrYe8gd",
+      "https://contra.com/sourik_das_itzcd1i0/work?r=sourik_das_itzcd1i0",
     ],
   },
 };

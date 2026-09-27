@@ -1,11 +1,12 @@
 import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://sourikdas.dev";
+  const baseUrl =
+    process.env.NEXT_PUBLIC_SITE_URL || "https://sourikdas-portfolio.vercel.app";
 
   return [
     {
-      url: `${baseUrl}/`,
+      url: `${baseUrl}`,
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 1.0,

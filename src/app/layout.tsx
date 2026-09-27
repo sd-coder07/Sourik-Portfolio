@@ -26,8 +26,11 @@ export const viewport: Viewport = {
   initialScale: 1,
 };
 
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL || "https://sourikdas-portfolio.vercel.app";
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://sourikdas.dev"),
+  metadataBase: new URL(siteUrl),
   title: {
     default: "Sourik Das — Full Stack Next.js & WordPress Web Developer | UI/UX & Poster Design",
     template: "%s | Sourik Das",
@@ -60,7 +63,7 @@ export const metadata: Metadata = {
     title: "Sourik Das — Full Stack Next.js & WordPress Web Developer",
     description:
       "25+ live websites shipped. Next.js web apps, 90+ Core Web Vitals WordPress builds, high-CTR product & service poster designs, and Figma UI/UX.",
-    url: "https://sourikdas.dev",
+    url: siteUrl,
     siteName: "Sourik Das — Web Engineering & Design",
     locale: "en_US",
     type: "website",
@@ -70,7 +73,7 @@ export const metadata: Metadata = {
     title: "Sourik Das — Full Stack Next.js & WordPress Web Developer",
     description:
       "Next.js web apps, 90+ Core Web Vitals WordPress websites, product & service poster designs, and Figma UI/UX.",
-    creator: "@sd_coder07",
+    creator: "@SourikDas17274",
   },
   robots: {
     index: true,
@@ -92,8 +95,8 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   name: "Sourik Das — Web Engineering & Creative Services",
-  image: "https://sourikdas.dev/icon.svg",
-  url: "https://sourikdas.dev",
+  image: `${siteUrl}/icon.svg`,
+  url: siteUrl,
   telephone: "",
   priceRange: "$$",
   address: {
@@ -111,10 +114,15 @@ const jsonLd = {
     "@type": "Person",
     name: "Sourik Das",
     jobTitle: "Full Stack Web Developer & Designer",
-    url: "https://sourikdas.dev",
+    url: siteUrl,
     sameAs: [
       "https://github.com/sd-coder07",
       "https://linkedin.com/in/sourik-das",
+      "https://x.com/SourikDas17274",
+      "https://www.instagram.com/sourik_das_/",
+      "https://www.facebook.com/profile.php?id=61572010961700",
+      "https://www.fiverr.com/s/VrYe8gd",
+      "https://contra.com/sourik_das_itzcd1i0/work?r=sourik_das_itzcd1i0",
     ],
   },
   hasOfferCatalog: {
